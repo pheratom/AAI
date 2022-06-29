@@ -17,9 +17,9 @@ class Install:
         Install.nordvpn()
         Install.gparted()
         Install.gnometweaks()
-        Install.zsh_p10k()
         Install.protonvpn()
         Install.nala()
+        Install.zsh_p10k()
     def librewolf(): #WARNING! It works with Ubuntu 2022.04 (jammy) based distros. Script from librewolf developer don't work properly (or it my mistake), so if you need to use other distro enter instead 'jammy' *other distro name*
         os.system('echo "deb [arch=amd64] http://deb.librewolf.net jammy main" | sudo tee /etc/apt/sources.list.d/librewolf.list')
         os.system('sudo wget https://deb.librewolf.net/keyring.gpg -O /etc/apt/trusted.gpg.d/librewolf.gpg')
@@ -78,7 +78,6 @@ class Install:
         os.system('sudo apt install gnome-tweaks -y')
 
     def zsh_p10k():
-        #Warning about changing terminal bug. When you install zsh it changes terminal to zsh. To return to main menu you need to type 'exit' in terminal
         print(f"""{Fore.RED}{Style.BRIGHT}
                                 .__            ____  ._. 
 __  _  _______  _______   ____  |__|  ____    / ___\ | | 
@@ -86,17 +85,13 @@ __  _  _______  _______   ____  |__|  ____    / ___\ | |
  \     /  / __ \_|  | \/|   |  \|  ||   |  \ \___  /  \| 
   \/\_/  (____  /|__|   |___|  /|__||___|  //_____/   __ 
               \/             \/          \/           \/ """)
-        print('Returning to main menu may be buggy, since while install your terminal changes.')
-        print('Also you may install additional font for your ZSH theme.')
-        print('Enter Enter to continue')
-        input()
+        print('You may install additional font for your ZSH theme.')
         os.system('sudo apt install zsh curl git -y')
         os.system('sudo chsh $USER -s /usr/bin/zsh')
         os.system('sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended')
         os.system('git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k')
-        os.system('rm ~/.zshrc')
-        os.system('cp .zshrc ~/.zshrc')
-        os.system('zsh')
+        os.system('rm ~/.zshrc && cp .zshrc ~/.zshrc')
+        print("{Style.BRIGHT}{Fore.RED}You may relogin to your account or reboot computer to change your default shell to ZSH.")
 
     def protonvpn():
         wget.download('https://protonvpn.com/download/protonvpn-stable-release_1.0.1-1_all.deb', 'protonvpn.deb')
