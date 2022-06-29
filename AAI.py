@@ -43,12 +43,12 @@ Select app: {Fore.BLUE}
 
 if __name__ == '__main__':
     print(Fore.GREEN + '''
-                     _____        __ 
-     /\        /\   |_   _|      /_ |
-    /  \      /  \    | |   __   _| |
-   / /\ \    / /\ \   | |   \ \ / / |
-  / ____ \  / ____ \ _| |_   \ V /| |
- /_/    \_\/_/    \_\_____|   \_(_)_|''') #https://www.fontchanger.net/ascii-text.html Font - Big
+                     _____        __  __ 
+     /\        /\   |_   _|      /_ |/_ |
+    /  \      /  \    | |   __   _| | | |
+   / /\ \    / /\ \   | |   \ \ / / | | |
+  / ____ \  / ____ \ _| |_   \ V /| |_| |
+ /_/    \_\/_/    \_\_____|   \_(_)_(_)_|''') #https://www.fontchanger.net/ascii-text.html Font - Big
     while True:
         printAppList()
         try:
