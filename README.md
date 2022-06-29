@@ -1,2 +1,16 @@
-# AAI
-AAI - Automatic App Installer (Ubuntu/Ubuntu based distros only!)
+# AAI - Automatic App Installer
+
+*It works with ubuntu based distros only*
+
+**Install:**
+
+`sudo apt install git`
+
+`git clone https://github.com/pheratom/AAI.git`
+
+`cd AAI`
+
+`python3 AAI.py` (If python3 isn't installed enter `sudo apt install python3 python3-pip`)
+
+**Supported apps:**
+*LibreWolf, Telegram, VeraCrypt, VirtualBox, KeePassXC, Discord, QBitTorrent, WireShark, NordVPN, GParted, Gnome Tweaks, ZSH + Powerlevel10k, ProtonVPN, Nala (APT FrontEnd)*
