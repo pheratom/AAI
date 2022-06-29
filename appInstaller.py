@@ -17,9 +17,9 @@ class Install:
         Install.nordvpn()
         Install.gparted()
         Install.gnometweaks()
+        Install.zsh_p10k()
         Install.protonvpn()
         Install.nala()
-        Install.zsh_p10k()
     def librewolf(): #WARNING! It works with Ubuntu 2022.04 (jammy) based distros. Script from librewolf developer don't work properly (or it my mistake), so if you need to use other distro enter instead 'jammy' *other distro name*
         os.system('echo "deb [arch=amd64] http://deb.librewolf.net jammy main" | sudo tee /etc/apt/sources.list.d/librewolf.list')
         os.system('sudo wget https://deb.librewolf.net/keyring.gpg -O /etc/apt/trusted.gpg.d/librewolf.gpg')
@@ -41,7 +41,7 @@ class Install:
         url = 'https://launchpad.net/veracrypt/trunk/1.25.9/+download/veracrypt-1.25.9-Ubuntu-22.04-amd64.deb.sig'
         wget.download(url, 'veracrypt.deb.sig')
         os.system('gpg --verify veracrypt.deb.sig')
-        input("Please, check that it Good Signature and press any key.")
+        input("Please, check that it Good Signature and press enter.")
         #Installing and cleaning workdir
         os.system('sudo apt install ./veracrypt.deb -y && rm veracrypt*')
 
@@ -49,7 +49,7 @@ class Install:
         os.system('sudo apt install virtualbox -y')
 
     def keepassxc():
-        os.system('sudo add-apt-repository ppa:phoerious/keepassxc') #Adding official KeePassXC repo
+        os.system('sudo add-apt-repository ppa:phoerious/keepassxc -y') #Adding official KeePassXC repo
         os.system('sudo apt update -y')
         os.system('sudo apt install keepassxc -y') #Installing latest version
 
@@ -91,7 +91,7 @@ __  _  _______  _______   ____  |__|  ____    / ___\ | |
         os.system('sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended')
         os.system('git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k')
         os.system('rm ~/.zshrc && cp .zshrc ~/.zshrc')
-        print("{Style.BRIGHT}{Fore.RED}You may relogin to your account or reboot computer to change your default shell to ZSH.")
+        print("{Style.BRIGHT}{Fore.RED}You need to relogin to your account or reboot computer to change your default shell to ZSH.")
 
     def protonvpn():
         wget.download('https://protonvpn.com/download/protonvpn-stable-release_1.0.1-1_all.deb', 'protonvpn.deb')
