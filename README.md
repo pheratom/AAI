@@ -4,7 +4,7 @@
 
 **Install:**
 
-`sudo apt install git`
+`sudo apt install git curl wget`
 
 `git clone https://github.com/pheratom/AAI.git`
 
@@ -13,4 +13,4 @@
 `python3 AAI.py` (If python3 isn't installed enter `sudo apt install python3 python3-pip`)
 
 **Supported apps:**
-*LibreWolf, Telegram, VeraCrypt, VirtualBox, KeePassXC, Discord, QBitTorrent, WireShark, NordVPN, GParted, Gnome Tweaks, ZSH + Powerlevel10k, ProtonVPN, Nala (APT FrontEnd)*
+*LibreWolf, Telegram, VeraCrypt, VirtualBox, KeePassXC, Discord, QBitTorrent, NordVPN, GParted, Gnome Tweaks, ZSH + Powerlevel10k, ProtonVPN, Nala (APT FrontEnd)*
