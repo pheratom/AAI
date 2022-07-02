@@ -11,12 +11,11 @@ def printAppList():
 \t5 - KeePassXC
 \t6 - Discord
 \t7 - QBitTorrent
-\t8 - Wireshark
-\t9 - NordVPN
-\t10 - GParted
-\t11 - Gnome Tweaks
-\t12 - ZSH + PowerLevel10k
-\t13 - ProtonVPN
-\t14 - Nala (APT FrontEnd)
+\t8 - NordVPN
+\t9 - GParted
+\t10 - Gnome Tweaks
+\t11 - ZSH + PowerLevel10k
+\t12 - ProtonVPN
+\t13 - Nala (APT FrontEnd)
 \t99 - Exit
 """)
