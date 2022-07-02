@@ -14,7 +14,6 @@ class unInstall:
         unInstall.keepassxc()
         unInstall.discord()
         unInstall.qbittorrent()
-        unInstall.wireshark()
         unInstall.nordvpn()
         unInstall.gparted()
         unInstall.gnometweaks()
@@ -29,6 +28,8 @@ class unInstall:
 
     def telegram():
         os.system('rm -rf ~/Telegram && rm -rf ~/.local/share/TelegramDesktop')
+        os.system('rm -rf ~/.local/share/applications/*Telegram_Desktop.desktop')
+        os.system('rm -rf ~/.local/share/applications/userapp-Telegram*')
 
     def veracrypt():
         os.system('sudo apt purge veracrypt -y')
@@ -50,10 +51,6 @@ class unInstall:
 
     def qbittorrent():
         os.system('sudo apt purge qbittorrent -y')
-        os.system('sudo apt autoremove -y')
-
-    def wireshark():
-        os.system('sudo apt purge wireshark -y')
         os.system('sudo apt autoremove -y')
 
     def nordvpn():
