@@ -25,18 +25,16 @@ class InstallMode:
         elif self.number == 7:
             Install.qbittorrent()
         elif self.number == 8:
-            Install.wireshark()
-        elif self.number == 9:
             Install.nordvpn()
-        elif self.number == 10:
+        elif self.number == 9:
             Install.gparted()
-        elif self.number == 11:
+        elif self.number == 10:
             Install.gnometweaks()
-        elif self.number == 12:
+        elif self.number == 11:
             Install.zsh_p10k()
-        elif self.number == 13:
+        elif self.number == 12:
             Install.protonvpn()
-        elif self.number == 14:
+        elif self.number == 13:
             Install.nala()
         else:
             print(f"{Style.BRIGHT}{Fore.RED}You entered wrong number!")
@@ -65,18 +63,16 @@ class UninstallMode:
         elif self.number == 7:
             unInstall.qbittorrent()
         elif self.number == 8:
-            unInstall.wireshark()
-        elif self.number == 9:
             unInstall.nordvpn()
-        elif self.number == 10:
+        elif self.number == 9:
             unInstall.gparted()
-        elif self.number == 11:
+        elif self.number == 10:
             unInstall.gnometweaks()
-        elif self.number == 12:
+        elif self.number == 11:
             unInstall.zsh_p10k()
-        elif self.number == 13:
+        elif self.number == 12:
             unInstall.protonvpn()
-        elif self.number == 14:
+        elif self.number == 13:
             unInstall.nala()
         else:
             print(f"{Style.BRIGHT}{Fore.RED}You entered wrong number!")
