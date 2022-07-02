@@ -8,11 +8,14 @@ try:
     from workModes import *
     from appList import printAppList as printAppList
 except ModuleNotFoundError:
+    colorama.init(autoreset = True)
     print(f"{Fore.RED}You did't installed requirement packages.")
     answer = input(f"Install packages? (y/n) ")
     if answer == 'y':
+        os.system('sudo apt install python3 python3-pip gnupg curl -y')
         os.system('python3 -m pip install wget && python3 -m pip install colorama')
-        pass
+        print(f"{Fore.RED}Restart app.")
+        sys.exit()
     elif answer == 'n':
         print(f"Ok, exitting...")
         sys.exit()
@@ -22,15 +25,16 @@ except ModuleNotFoundError:
 else:
     from appInstaller import Install
     from workModes import *
+    from appList import printAppList as printAppList
 colorama.init(autoreset = True)
 if __name__ == '__main__':
     print(Fore.GREEN + '''
-                     _____        __   ___  
-     /\        /\   |_   _|      /_ | |__ \ 
-    /  \      /  \    | |   __   _| |    ) |
-   / /\ \    / /\ \   | |   \ \ / / |   / / 
-  / ____ \  / ____ \ _| |_   \ V /| |_ / /_ 
- /_/    \_\/_/    \_\_____|   \_(_)_(_)____|''') #https://www.fontchanger.net/ascii-text.html Font - Big
+                     _____        __   ____  
+     /\        /\   |_   _|      /_ | |___ \ 
+    /  \      /  \    | |   __   _| |   __) |
+   / /\ \    / /\ \   | |   \ \ / / |  |__ < 
+  / ____ \  / ____ \ _| |_   \ V /| |_ ___) |
+ /_/    \_\/_/    \_\_____|   \_(_)_(_)____/ ''') #https://www.fontchanger.net/ascii-text.html Font - Big
     while True:
         printAppList()
         try:
