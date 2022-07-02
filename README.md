@@ -10,6 +10,8 @@
 
 `cd AAI`
 
+`pip3 install wget colorama`
+
 `python3 AAI.py` (If python3 isn't installed enter `sudo apt install python3 python3-pip`)
 
 **Supported apps:**
