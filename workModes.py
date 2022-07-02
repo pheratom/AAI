@@ -1,7 +1,6 @@
 from appInstaller import Install
 from appUninstaller import unInstall
 import sys
-#Wireshark removed.
 class InstallMode:
     def __init__(self, number):
         self.number = number
