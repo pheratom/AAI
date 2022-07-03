@@ -1,6 +1,6 @@
 # AAI - Automatic App Installer
 
-*It works with ubuntu based distros only (2022.04 jammy recommended)*
+*It works with ubuntu based distros only (22.04 jammy recommended)*
 
 **Install:**
 
