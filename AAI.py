@@ -14,6 +14,7 @@ except ModuleNotFoundError:
     if answer == 'y':
         os.system('sudo apt install python3 python3-pip gnupg curl -y')
         os.system('python3 -m pip install wget && python3 -m pip install colorama')
+        os.system('python3 -m pip install requests')
         print(f"{Fore.RED}Restart app.")
         sys.exit()
     elif answer == 'n':
@@ -28,13 +29,17 @@ else:
     from appList import printAppList as printAppList
 colorama.init(autoreset = True)
 if __name__ == '__main__':
+    print(f"{Fore.GREEN}Enter your account password to get su privileges.")
+    print(f"{Fore.GREEN}P.S. It will just give superuser privileges for your user terminal. It will save your time (~5 seconds) in future.")
+    os.system('sudo echo > /dev/null')
+    os.system('clear')
     print(Fore.GREEN + '''
-                     _____        __   ____  
-     /\        /\   |_   _|      /_ | |___ \ 
-    /  \      /  \    | |   __   _| |   __) |
-   / /\ \    / /\ \   | |   \ \ / / |  |__ < 
-  / ____ \  / ____ \ _| |_   \ V /| |_ ___) |
- /_/    \_\/_/    \_\_____|   \_(_)_(_)____/ ''') #https://www.fontchanger.net/ascii-text.html Font - Big
+                     _____        __   ____  __ 
+     /\        /\   |_   _|      /_ | |___ \/_ |
+    /  \      /  \    | |   __   _| |   __) || |
+   / /\ \    / /\ \   | |   \ \ / / |  |__ < | |
+  / ____ \  / ____ \ _| |_   \ V /| |_ ___) || |
+ /_/    \_\/_/    \_\_____|   \_(_)_(_)____(_)_|''') #https://www.fontchanger.net/ascii-text.html Font - Big
     while True:
         printAppList()
         try:
