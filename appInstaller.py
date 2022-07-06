@@ -42,7 +42,7 @@ class Install:
         os.system('tar -xf telegram.tar.xz -C ~/')
         os.system('~/Telegram/Telegram &')
         os.system('rm telegram*')
-        print(f"{Fore.RED}Telegram will close automatically!")
+        print(f"{Fore.RED}Telegram will close automatically! (if you entered user password on script run)")
         time.sleep(5)
         os.system('sudo pkill Telegram') #Auto add telegram icon in app list
 
